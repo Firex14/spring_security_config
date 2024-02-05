@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    generate-ddl: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_security_db
+    username: yaba
+    password: yaba
+    driver-class-name: org.postgresql.Driver
+
+security:
+  jwt:
+    secret: uF142Q7lyRB892Vt9N0ZAdXeILm441I00cEzR12NBDJQans34489NDDGAQPLWBNI
+    header: Bearer
+    expiration: 14400
+
+
+allowed:
+  origins: http://localhost:4200
+  methods: GET, POST, PUT, DELETE, OPTIONS, PATCH
